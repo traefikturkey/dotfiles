@@ -2,6 +2,11 @@ autoload -U compinit && compinit
 
 #PATH=$PATH:/usr/local/bin
 
+HISTFILE=/mnt/.devcontainer/shell-history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt share_history
+
 alias kc='kubectl'
 alias l='ls --color -lha --group-directories-first'
 
