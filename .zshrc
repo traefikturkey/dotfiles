@@ -2,7 +2,10 @@ autoload -U compinit && compinit
 
 #PATH=$PATH:/usr/local/bin
 
-HISTFILE=/mnt/.devcontainer/shell-history
+if [ -f /mnt/.devcontainer/shell-history ]; then
+    HISTFILE=/mnt/.devcontainer/shell-history
+fi
+
 HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
